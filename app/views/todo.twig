@@ -1,0 +1,45 @@
+{% extends 'layouts/app.twig' %}
+
+{% block content %}
+
+    <form action="/new-todo" method="post">
+        <div>
+            <label for="todo">Задачи</label>
+            <input type="text" id="todo" name="todo">
+        </div>
+
+        <button>Добавить</button>
+    </form>
+    {% if todo_list|length > 0 %}
+        <ul>
+            {% for todo in todo_list %}
+                <li>
+                    <b>Задача: </b> {{ todo.todo_content }}.
+                    <b>Дата создания:</b>
+                    <i>{{ todo.created_at | date('M ' ~  ltrim ~  ', Y | H:i:s', "Asia/Almaty") |
+                        replace({
+                            'Jan' : 'Янв',
+                            'Feb' : 'Фев',
+                            'Mar' : 'Мар',
+                            'Apr' : 'Апр',
+                            'May' : 'Май',
+                            'Jun' : 'Июн',
+                            'Jul' : 'Июл',
+                            'Aug' : 'Авг',
+                            'Sep' : 'Сен',
+                            'Oct' : 'Окт',
+                            'Nov' : 'Ноя',
+                            'Dec' : 'Дек'
+                        }) }}
+                    </i>
+                    <hr/>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <div>
+            Задач нет!
+        </div>
+    {% endif %}
+
+{% endblock %}
