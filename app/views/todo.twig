@@ -2,18 +2,21 @@
 
 {% block content %}
 
+
     <form action="/new-todo" method="post">
         <div>
             <label for="todo">Задачи</label>
             <input type="text" id="todo" name="todo">
         </div>
 
-        <button>Добавить</button>
+        <div>
+            <button>Добавить</button>
+        </div>
     </form>
     {% if todo_list|length > 0 %}
         <ul>
             {% for todo in todo_list %}
-                <li>
+                <li class="check_list">
                     <b>Задача: </b> {{ todo.todo_content }}.
                     <b>Дата создания:</b>
                     <i>{{ todo.created_at | date('M ' ~  ltrim ~  ', Y | H:i:s', "Asia/Almaty") |

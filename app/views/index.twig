@@ -3,20 +3,37 @@
 {% block content %}
 
     <form action="/new-book" method="post">
-        <div>
-            <label for="name">Название</label>
-            <input type="text" id="name" name="name">
+        <div class="div_align">
+            <div>
+                <label class="mycss" for="name">Название</label>
+            </div>
+            <div>
+                <label for="author">Автор</label>
+            </div>
+            <div>
+                <label for="year">Год</label>
+            </div>
         </div>
-        <div>
-            <label for="author">Автор</label>
-            <input type="text" id="author" name="author">
-        </div>
-        <div>
-            <label for="year">Год</label>
-            <input type="number" min="1970" max="2150" id="year" name="year">
-        </div>
-        <button>Добавить</button>
 
+        <div class="div_align">
+            <tr>
+                <td>
+                    <p style="text-align:center;">
+                        <input type="text" id="name" name="name">
+                    </p>
+                    <p style="text-align:center;">
+                        <input type="text" id="author" name="author">
+                    </p>
+                    <p style="text-align:center;">
+                        <input type="number" min="1970" max="2150" id="year" name="year">
+                    </p>
+                </td>
+            </tr>
+        </div>
+
+        <div>
+        <button>Добавить</button>
+        </div>
     </form>
 
     {% if books|length > 0 %}

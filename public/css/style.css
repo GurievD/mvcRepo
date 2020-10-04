@@ -1,0 +1,63 @@
+body {
+    background: url("https://svitla.com/uploads/0/645-php.jpg?1512146659") fixed;
+}
+
+button {
+    background-color: greenyellow;
+}
+
+.container {
+    zoom: 1.8;
+}
+
+form {
+    background-color: ghostwhite;
+    border: 1.5px solid black;
+    width: fit-content;
+}
+
+ul {
+    background-color: ghostwhite;
+    border: 1.5px solid black;
+    width: fit-content;
+    list-style: none;
+}
+
+nav {
+    background-color: ghostwhite;
+    border: 1.5px solid black;
+    width: fit-content;
+}
+
+div {
+    margin: 5px;
+    padding: 5px;
+}
+
+.div_align {
+    display: inline-block;
+}
+
+.check_list {
+    background-color: lightgreen;
+    width: fit-content;
+    border-radius: 6px;
+}
+
+div,li,button {
+    font-family: 'Oswald', sans-serif;
+    margin: 3px;
+    padding: 2px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    margin: 10px;
+}
+
+hr {
+    border-style: hidden;
+}
